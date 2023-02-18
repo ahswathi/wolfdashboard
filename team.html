@@ -1,0 +1,230 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link type="javascript" href="dognut.js">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Bootstap 5 Responsive Admin Dashboard</title>
+</head>
+
+<body>
+   
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebarbg  text-white" id="sidebar-wrapper">
+          <div class="sidebar-heading  ms-4  pt-3  text-uppercase ">LOGO</div>
+              <div class="list-group list-group-flush my-3">
+              <a href="index.html" class="list-group-item list-group-item-action mx-3 my-1 text-start bg-transparent   rounded-2 second-text ">
+                Dashboard
+              </a>
+              <a href="product.html" class="list-group-item list-group-item-action  my-1   mx-3 text-start  bg-transparent second-text ">Products</a>
+              <a href="#" class="list-group-item list-group-item-action   my-1   mx-3 text-start bg-transparent second-text ">Favorites</a>
+              <a href="#" class="list-group-item list-group-item-action    my-1  mx-3 text-start bg-transparent second-text ">Inbox</a>
+              <a href="orderlist.html" class="list-group-item list-group-item-action  mx-3   my-1  text-start bg-transparent second-text ">Order Lists</a>
+              <a href="#" class="list-group-item list-group-item-action  my-1    mx-3 text-start bg-transparent second-text  ">Product Stock</a>
+              </div>
+              <hr class="px-3" style="border :1px solid #3E4656;">
+              <div class="list-group list-group-flush my-2">
+                <a href="pricing.html" class="list-group-item list-group-item-action   mx-3 my-1  text-start bg-transparent second-text ">Pricing</a>
+              <a href="#" class="list-group-item list-group-item-action   my-1  mx-3 text-start bg-transparent second-text ">Calender</a>
+              <a href="todo.html" class="list-group-item list-group-item-action  my-1  mx-3 text-start bg-transparent second-text ">To-Do</a>
+                      <a href="#" class="list-group-item list-group-item-action   my-1  mx-3 text-start  bg-transparent second-text ">Contact</a>
+                          <a href="#" class="list-group-item list-group-item-action  my-1   mx-3  text-start bg-transparent second-text ">Invoice</a>
+                              <a href="#" class="list-group-item list-group-item-action  my-1  mx-3 text-start  bg-transparent second-text ">UI Elements</a>
+                                  <a href="team.html" class="list-group-item list-group-item-action  mx-3  my-1  text-start  mx-3  bg-primary rounded-2  second-text active">Team</a>
+                                      <a href="#" class="list-group-item list-group-item-action   my-1  mx-3  text-start bg-transparent second-text ">Table</a>
+              <!-- <a href="#" class="list-group-item list-group-item-action px-2 bg-transparent text-danger "><i
+                      class="fas fa-power-off me-2"></i>Logout</a> -->
+          </div>
+      </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <nav class="navbar navbar-expand-lg navbar-light py-3 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left text-white fs-4 me-3" id="menu-toggle"></i>
+                <div class="px-3 d-flex text-white-50 border rounded-pill  pt-2 pb-1">
+                <i class="fas fa-search me-3 ">
+                </i>
+                <h6 class="ps-2 pe-5 me-5">Search</h6>
+                </div>
+            </div>
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>John Doe
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+
+
+
+  <div class="carousel-fluid px-5" id="products">
+   <div class="row g-3 my-2"> 
+    <section class="mb-4">
+        <h3 class="text-white text-md-start">
+          Team
+        </h3>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-xl-8 text-center">
+            
+          </div>
+        </div>
+      
+        <div class="row text-center">
+          <div class="testimonialscol rounded-4 col-md-3 px-2 mb-5 mb-md-0 py-4  m-3">
+            <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+              class="rounded-circle  shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-2 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-2 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol   rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+          <div class="testimonialscol  rounded-4 col-md-3 mb-5 mb-md-0  mb-md-0 py-4 m-3">
+               <div class="d-flex justify-content-center mb-4 mt-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h6 class="mb-1 text-white">Maria Smantha</h6>
+            <p class="px-xl-3 mb-1 text-white-50">Admin</p>
+            <p class="px-xl-3 text-white-50">xyz@gmail.com</p>                        
+          </div>
+         
+        </div>
+      </section>
+      </div>
+</div>  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script>
+      var el = document.getElementById("wrapper");
+      var toggleButton = document.getElementById("menu-toggle");
+
+      toggleButton.onclick = function () {
+          el.classList.toggle("toggled");
+      };
+
+      
+
+  </script>
+</body>
+
+</html>

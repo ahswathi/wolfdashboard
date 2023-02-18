@@ -1,0 +1,352 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link type="javascript" href="dognut.js">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Bootstap 5 Responsive Admin Dashboard</title>
+</head>
+
+<body>
+   
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebarbg  text-white" id="sidebar-wrapper">
+          <div class="sidebar-heading  ms-4  pt-3  text-uppercase ">LOGO</div>
+              <div class="list-group list-group-flush my-3">
+              <a href="index.html" class="list-group-item list-group-item-action my-1   bg-transparent  mx-3 text-startsecond-text ">
+                Dashboard
+              </a>
+              <a href="product.html" class="list-group-item list-group-item-action   mx-3  my-1 text-start  bg-transparent second-text ">Products</a>
+              <a href="#" class="list-group-item list-group-item-action   my-1   mx-3   text-start bg-transparent second-text ">Favorites</a>
+              <a href="#" class="list-group-item list-group-item-action    my-1   mx-3  text-start bg-transparent second-text ">Inbox</a>
+              <a href="orderlist.html" class="list-group-item list-group-item-action active   my-1  text-start mx-3  bg-primary rounded-2  second-text ">Order Lists</a>
+              <a href="#" class="list-group-item list-group-item-action  my-1   mx-3    text-start bg-transparent second-text  ">Product Stock</a>
+              </div>
+              <hr class="px-3" style="border :1px solid #3E4656;">
+              <div class="list-group list-group-flush my-2">
+                <a href="pricing.html" class="list-group-item list-group-item-action  mx-3    my-1  text-start bg-transparent second-text ">Pricing</a>
+              <a href="#" class="list-group-item list-group-item-action   my-1   mx-3 text-start bg-transparent second-text ">Calender</a>
+              <a href="todo.html" class="list-group-item list-group-item-action  my-1    mx-3 text-start bg-transparent second-text ">To-Do</a>
+                      <a href="#" class="list-group-item list-group-item-action   my-1  mx-3  text-start  bg-transparent second-text ">Contact</a>
+                          <a href="#" class="list-group-item list-group-item-action  my-1   mx-3    text-start bg-transparent second-text ">Invoice</a>
+                              <a href="#" class="list-group-item list-group-item-action  my-1   mx-3 text-start  bg-transparent second-text ">UI Elements</a>
+                                  <a href="team.html" class="list-group-item list-group-item-action     mx-3 my-1  text-start bg-transparent second-text ">Team</a>
+                                      <a href="#" class="list-group-item list-group-item-action   my-1  mx-3    text-start bg-transparent second-text ">Table</a>
+              <!-- <a href="#" class="list-group-item list-group-item-action px-2 bg-transparent text-danger "><i
+                      class="fas fa-power-off me-2"></i>Logout</a> -->
+          </div>
+      </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <nav class="navbar navbar-expand-lg navbar-light py-3 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left text-white fs-4 me-3" id="menu-toggle"></i>
+                <div class="px-3 d-flex text-white-50 border rounded-pill  pt-2 pb-1">
+                <i class="fas fa-search me-3 ">
+                </i>
+                <h6 class="ps-2 pe-5 me-5">Search</h6>
+                </div>
+            </div>
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>John Doe
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+            
+       
+          
+      
+  <div class="container-fluid px-4">  
+    <div class="row g-3 my-3">
+      <h3 class="text-white text-md-start mb-4">
+        Order List
+       </h3>
+       <div class="d-flex text-center text-white rounded-3 border-secondary ">
+       <div class="filter-option d-flex  pt-2 border rounded-start-3 border-secondary">
+       <svg width="22" height="21" class="border-secondary mx-3 mt-2" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1.63119 0.5H12.3687C12.4657 0.500031 12.5606 0.528268 12.6418 0.58127C12.723 0.634273 12.7871 0.709753 12.8261 0.798516C12.8652 0.887279 12.8776 0.985492 12.8619 1.08119C12.8461 1.17689 12.8029 1.26594 12.7374 1.3375L8.63119 5.85625C8.54573 5.94773 8.49873 6.06857 8.49994 6.19375V9.73125C8.5007 9.81434 8.48048 9.89629 8.44115 9.96949C8.40182 10.0427 8.34465 10.1048 8.27494 10.15L6.27494 11.4812C6.19992 11.5307 6.11297 11.559 6.02323 11.5631C5.9335 11.5673 5.84429 11.5473 5.76499 11.5051C5.68569 11.4629 5.61922 11.4001 5.57258 11.3233C5.52594 11.2465 5.50085 11.1586 5.49994 11.0688V6.19375C5.50114 6.06857 5.45415 5.94773 5.36869 5.85625L1.26244 1.3375C1.19697 1.26594 1.15373 1.17689 1.13798 1.08119C1.12224 0.985492 1.13466 0.887279 1.17374 0.798516C1.21282 0.709753 1.27688 0.634273 1.3581 0.58127C1.43932 0.528268 1.5342 0.500031 1.63119 0.5V0.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+   </div>  
+   <div class="filter-option d-flex  pt-3 border-end border-bottom border-top border-secondary">
+     <p class="text-center px-3  border-secondary "> Filter By </p>
+   </div>
+   <div class="dropdown  filter-option border-end border-bottom border-top  border-secondary   pt-2 px-2">
+       <button class="btn  dropdown-toggle text-white " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+         Date
+       </button>
+   </div>
+   <div class="dropdown filter-option border-end  border-bottom border-top border-secondary   pt-2 px-2">
+       <button class="btn text-white  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+         Order Type
+       </button>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+       </ul>
+   </div>
+   <div class="dropdown border-end  border-bottom border-top  filter-option  border-secondary   pt-2  px-2">
+       <button class="btn text-white  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+         Order Status
+       </button>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+         <li><a class="dropdown-item" href="#">Filter 1</a></li>
+       </ul>
+   </div>
+   <div class="d-flex border-end  border-bottom border-top  filter-option  rounded-end-3 border-secondary Pending pt-3  px-3">
+         <svg width="26" height="27" viewBox="0 0 16 17" class="px-1 "  fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M4.9873 6.73126H1.9873V3.73126" stroke="#FF8743" stroke-linecap="round" stroke-linejoin="round"/>
+           <path d="M4.1123 12.3875C4.88131 13.1571 5.86131 13.6814 6.92833 13.894C7.99535 14.1066 9.10145 13.9979 10.1067 13.5818C11.112 13.1656 11.9712 12.4607 12.5757 11.5561C13.1803 10.6515 13.503 9.58799 13.503 8.5C13.503 7.41201 13.1803 6.34847 12.5757 5.4439C11.9712 4.53933 11.112 3.83439 10.1067 3.41824C9.10145 3.00209 7.99535 2.89343 6.92833 3.10601C5.86131 3.31859 4.88131 3.84286 4.1123 4.6125L1.9873 6.73125" stroke="#FF8743" stroke-linecap="round" stroke-linejoin="round"/>
+           </svg>
+       <p class="text-center">Reset Filter</p>
+   </div> 
+</div>
+<div class="row g-3 my-3 mx-1">     
+<table class="table table-order-list text-white m-0">
+        <thead class="text-center">
+          <tr class=" border-secondary ">
+            <th class="ID py-3" style="background-color: #323D4E;" scope="col">ID</th>
+            <th class="py-3" style="background-color: #323D4E;" scope="col">Name</th>
+            <th class="py-3" style="background-color: #323D4E;"  scope="col">Address</th>
+            <th class="py-3" style="background-color: #323D4E;" scope="col">Date</th>
+            <th class="py-3" style="background-color: #323D4E;" scope="col">Type</th>
+            <th class="Status py-3 " class=" " style="background-color: #323D4E;" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="py-4 border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+            <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary  tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+            <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+            <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class=" border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class="border-secondary tablecol text-center">
+            <td class="py-3">00001</th>
+            <td class="py-3">Demo Name</td>
+            <td class="py-3">Weekly</td>
+            <td class="py-3">05 Sep 2022</td>
+            <td class="py-3">Santosh</td>
+             <td class="Pending py-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+          <tr class=" rounded-bottom-3 tablecol text-center">
+            <td class="border-bottom-0 py-3 last1 ">00001</th>
+            <td class="border-bottom-0 py-3">Demo Name</td>
+            <td class="border-bottom-0 py-3">Weekly</td>
+            <td class="border-bottom-0 py-3">05 Sep 2022</td>
+            <td class="border-bottom-0 py-3">Santosh</td>
+             <td class="Pending py-3 border-bottom-0 last2"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8L4.2 5.15C4.13826 5.1031 4.08811 5.04263 4.05344 4.97328C4.01876 4.90393 4.00048 4.82754 4 4.75V2.5C4 2.36739 4.05268 2.24021 4.14645 2.14645C4.24021 2.05268 4.36739 2 4.5 2H11.5C11.6326 2 11.7598 2.05268 11.8536 2.14645C11.9473 2.24021 12 2.36739 12 2.5V4.725C11.9995 4.80254 11.9812 4.87893 11.9466 4.94828C11.9119 5.01763 11.8617 5.0781 11.8 5.125L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8L4.2 10.85C4.13826 10.8969 4.08811 10.9574 4.05344 11.0267C4.01876 11.0961 4.00048 11.1725 4 11.25V13.5C4 13.6326 4.05268 13.7598 4.14645 13.8536C4.24021 13.9473 4.36739 14 4.5 14H11.5C11.6326 14 11.7598 13.9473 11.8536 13.8536C11.9473 13.7598 12 13.6326 12 13.5V11.275C11.9995 11.1975 11.9812 11.1211 11.9466 11.0517C11.9119 10.9824 11.8617 10.9219 11.8 10.875L8 8Z" stroke="#D48A48" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+               Pending</td>
+          </tr>
+        </tbody>
+      </table>        
+       </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script>
+      var el = document.getElementById("wrapper");
+      var toggleButton = document.getElementById("menu-toggle");
+
+      toggleButton.onclick = function () {
+          el.classList.toggle("toggled");
+      };
+
+      
+      
+
+  </script>
+</body>
+
+</html>

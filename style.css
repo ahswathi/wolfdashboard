@@ -1,0 +1,135 @@
+/* :root {
+  --main-bg-color: #090B1A ;
+  --main-text-color: #009d63;
+  --second-text-color: #bbbec5;
+  --second-bg-color: #c1efde;
+}
+ */
+ /* :root {
+   background-color: #090B1A;
+ }
+ */
+ .rounded-full {
+    border-radius: 100%;
+  }
+  
+  #wrapper {
+    overflow-x: hidden;
+    background-image: linear-gradient(
+      to right,
+      #baf3d7,
+      #c2f5de,
+      #cbf7e4,
+      #d4f8ea,
+      #ddfaef
+    );
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  .list-group a{
+    width: 12rem;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  
+  }
+  #page-content-wrapper {
+    min-width: 100vw;
+    background-color: #090B1A;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  #menu-toggle {
+    cursor: pointer;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 20px 30px;
+  }
+  
+  .list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+  }
+  
+  
+  .cont-col, .navbar, .sidebarbg, .Salescol, .tablecol, .cols, .testimonialscol, .checkbox-container {
+    background-color: #273142;
+  }
+  .counts{
+    color: #2A9A35;
+  }
+  .secondary-bg{
+    background-color: #7474E1;
+  }
+  .sidebarbg a{
+    color: white;
+  }
+  .pricing-fluid{
+    list-style-type: none;
+  }
+  .checkbox-container
+   {
+       padding:20px;
+   }
+  
+  
+   .color-blue {
+    background-color:#4880FF;
+  }
+  .form-subs-item{
+  display: inline-block;
+  }
+  .form-subs-item.active{
+  background-color: #4880FF;
+  }
+  
+  .ID{
+    border-radius: 12px 0px 0px;
+  }
+  .Status{
+    border-radius: 0px 12px 0px 0px;
+  }
+  .last1{
+    border-radius:0px 0px  0px 12px;
+  }
+  .last2{
+    border-radius:0px 0px  12px 0px ;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }
+  
