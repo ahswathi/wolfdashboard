@@ -74,7 +74,7 @@
   }
   
   
-  .cont-col, .navbar, .sidebarbg, .Salescol, .tablecol, .cols, .testimonialscol, .checkbox-container {
+  .cont-col, .navbar, .sidebarbg, .Salescol, .tablecol, .carouselbg, .cols, .testimonialscol, .checkbox-container {
     background-color: #273142;
   }
   .counts{
